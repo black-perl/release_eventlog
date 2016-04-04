@@ -2,8 +2,8 @@
 
 ## Features:
 
- * Build eventlog in a docker image
- * Create the debian package for the eventlog in the docker itself
+ * Builds eventlog in a docker image
+ * Creates the debian package for the eventlog in the docker itself
  * Creates a minimal release of eventlog
  * Uploads the Debian package as a release asset
 
