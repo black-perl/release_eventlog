@@ -169,7 +169,8 @@ class BaseClient(object):
                                       headers=headers,
                                       params=params,
                                       data=data,
-                                      timeout=TIMEOUT_SEC)
+                                      timeout=TIMEOUT_SEC,
+                                      verify=False)
             else:
                 result = methodToCall(request_url,
                                       headers=headers,
