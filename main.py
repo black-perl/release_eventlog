@@ -3,8 +3,6 @@ import random,string
 from release import Release
 from settings import PACKAGE_LOCATION
 
-k = None
-
 PROJECT_DIR = os.chdir(os.getcwd())
 IMAGE_TAG = 'eventlog_image'
 # Generate a random string to tag a container
