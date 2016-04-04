@@ -41,6 +41,31 @@ class Result(object):
         try:
             self._json = json.loads(result.text)
             self._responseHeaders = result.headers
+            if self._status in range(200,300):
+                pass
+            else:
+                error_id = self._status
+                error_name = ''
+                error_message = ''
+                if 'errors' in self._json:
+                    error_name = str(self._json['errors'])
+                if 'message' in self._json:
+                    error_message = str(self._json['message'])
+                if error_name and error_message:
+                    raise APIError(error_id,
+                                   error_name,
+                                   error_message,
+                                   self._request_url)
+                elif error_message:
+                    raise APIError(error_id,
+                                   error_message,
+                                   error_message,
+                                   self._request_url)
+                else:
+                    raise APIError(error_id,
+                                   'Improper Request',
+                                   'Improper Request',
+                                   self._request_url)
 
         except ValueError as e:
             raise APIError('ValueError', 
