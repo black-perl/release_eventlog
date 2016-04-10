@@ -12,14 +12,17 @@
 - Fork `eventlog` under `USER` Github account.
 
 - Then clone `eventlog_release`:
+
     ```bash
         $ git clone https://github.com/black-perl/release_eventlog.git
     ```
+
 - Update the `settings.py` file for the following information:
     * USER = `<Github-UserName>`
     * PASSWORD = `<Github-Password>`
     * LOGGING = `1 (enhanced logging) else 0 (Normal Logging)`
 - Running : 
+
     ```bash
       $ python main.py
     ```
