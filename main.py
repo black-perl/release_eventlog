@@ -1,7 +1,7 @@
 import os
 import random,string
 from release import Release
-from settings import PACKAGE_LOCATION,LOGGING
+from settings import PACKAGE_LOCATION,LOGGING, USER
 
 PROJECT_DIR = os.chdir(os.getcwd())
 IMAGE_TAG = 'eventlog_image'
@@ -34,7 +34,7 @@ def main():
 
     # Create a release
     print "Publishing the release ...\n"
-    rl = Release('black-perl','eventlog')
+    rl = Release(USER,'eventlog')
     resp1 = rl.createRelease({
         "tag_name": "v0.3.16",
         "target_commitish": "master",
