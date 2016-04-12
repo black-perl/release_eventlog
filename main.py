@@ -1,7 +1,7 @@
 import os
 import random,string
 from release import Release
-from settings import PACKAGE_LOCATION,LOGGING, USER
+from settings import PACKAGE_LOCATION,LOGGING,USER
 
 PROJECT_DIR = os.chdir(os.getcwd())
 IMAGE_TAG = 'eventlog_image'
